@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday Iman!</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    /* CSS styles */
+    body {
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: gold;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      text-align: right; /* Align titles to the right */
+      height: 80px; /* Adjust the height as needed */
+    }
+
+    .navbar a {
+      color: white;
+      text-align: center;
+      padding: 30px 16px; /* Adjust the padding to vertically center the text */
+      text-decoration: none;
+      font-size: 17px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .image-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap; /* Prevent wrapping */
+    }
+
+    .image-strip img {
+      width: 200px;
+      height: 200px; /* Adjust the height as needed */
+      object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+      margin: 10px;
+    }
+
+    .message {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .image-strip img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .navbar a {
+        display: none;
+      }
+
+      .navbar .icon {
+        display: block;
+        float: right;
+      }
+
+      /* Show the navbar when the icon is clicked */
+      .navbar.responsive {
+        position: relative;
+      }
+
+      .navbar.responsive .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .navbar.responsive a {
+        display: block;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar" id="myNavbar">
+    <a href="#">Happy Birthday</a>
+    <a href="#">Emo Message</a>
+    <a href="#">Our Friendship</a>
+    <a href="#">Fav pics</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+  </div>
+
+  <div class="header">
+    <h1>Happy Birthday Iman!</h1>
+  </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper image-strip">
+      <div class="swiper-slide"><img src="AlimNight.jpg" alt="Image 1"></div>
+      <div class="swiper-slide"><img src="DallasDowntown.jpg" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="DallasBrunchSolo.jpg" alt="Image 3"></div>
+      <div class="swiper-slide"><img src="ChicagoDowntown.jpg" alt="Image 4"></div>
+      <div class="swiper-slide"><img src="PromSolo.jpg" alt="Image 5"></div>
+      <div class="swiper-slide"><img src="Aquarium.jpg" alt="Image 6"></div>
+      <!-- Add more images here -->
+    </div>
+    <!-- Add pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <div class="message">
+    <p>Happy 19th Birthday Iman! I love you so much, and I wanted to give you something</br></p>
+    <p>personal from my heart. And there's nothing more I enjoy than letting you know</br></p>
+    <p>how much you mean to me as my best friend.</br></p>
+    <p>Have fun exploring this website just for you, love you </br></p>
+    <p>-Hafsah</br></p>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+      loop: true, // Enable continuous loop
+      slidesPerView: 'auto', // Display as many slides as possible
+      spaceBetween: 10, // Add spacing between slides
+      navigation: {
+        nextEl: '.swiper-button-next', // Next slide button selector
+        prevEl: '.swiper-button-prev', // Previous slide button selector
+      },
+      pagination: {
+        el: '.swiper-pagination', // Pagination bullets container selector
+      },
+    });
+
+    function toggleNav() {
+      var navbar = document.getElementById("myNavbar");
+      if (navbar.className === "navbar") {
+        navbar.className += " responsive";
+      } else {
+        navbar.className = "navbar";
+      }
+    }
+  </script>
+</body>
+</html>
