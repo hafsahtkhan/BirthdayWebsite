@@ -1,7 +1,16 @@
 const card = document.querySelector('.card_inner1');
+const hiddenText = document.getElementById('secret');
 
 card.addEventListener('click', function() {
     card.classList.toggle('is-flipped');
+    if (hiddenText.style.display === 'none') {
+        hiddenText.style.display = 'block';
+      } else {
+        hiddenText.style.display = 'none';
+      }
+    hiddenText.style.textAlign = 'center';
+    hiddenText.style.fontFamily = 'sans-serif';
+    hiddenText.style.color = 'white';
 })
 
 const card2 = document.querySelector('.card_inner2');
